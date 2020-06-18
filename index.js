@@ -1,5 +1,7 @@
 function getData(){
-fetch('http://api.open-notify.org/iss-now.json')
+fetch('http://api.open-notify.org/iss-now.json', {
+  referrerPolicy:'unsafe-url'})
+
 .then(function (response) {
   return response.json();
 })
