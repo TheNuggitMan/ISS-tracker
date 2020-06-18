@@ -1,6 +1,6 @@
 function getData(){
 fetch('http://api.open-notify.org/iss-now.json', {
-  referrerPolicy:'no-referrer-when-downgrade'})
+  referrer:'http://api.open-notify.org/iss-now.json'})
 .then(function (response) {
   return response.json();
 })
