@@ -1,6 +1,6 @@
 function getData(){
 fetch('http://api.open-notify.org/iss-now.json', {
-  referrerPolicy: "no-referrer"})
+  referrerPolicy: "origin"})
 .then(function (response) {
   return response.json();
 })
