@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Earth Orbiter Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Earth Orbiter Regular'), url('font/earthorbiter.woff') format('woff');
+}
+body {
+  font-family:'Earth Orbiter Regular';
+  font-weight:normal;
+  font-size:25px;
+}
+
+div, p {
+  display: flex;
+  align-items:  center;
+  flex-direction: column;
+}
+
+.headers, p {
+  text-align: center;
+}
+
+#container {
+  height: 150px;
+}
+
+#refresh, #listPeople {
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  }
+
+#mapid {
+  height: 180px;
+  width: 400px;
+}
