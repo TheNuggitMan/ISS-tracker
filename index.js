@@ -1,6 +1,5 @@
 function getData(){
-fetch('http://api.open-notify.org/iss-now.json', {
-  credentials: "include")}
+fetch('https://de.hideproxy.me/go.php?u=zUux0j32hsgLGF2U6u%2BaCcUi1y1%2BgMjOwd0fMgm34g%2F0tAA%3D&b=5&f=norefer')
 .then(function (response) {
   return response.json();
 })
