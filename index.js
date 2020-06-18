@@ -1,6 +1,6 @@
 function getData(){
 fetch('http://api.open-notify.org/iss-now.json', {
-  credentials: "include"})
+  mode: "no-cors"})
 .then(function (response) {
   return response.json();
 })
