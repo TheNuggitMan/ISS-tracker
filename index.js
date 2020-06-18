@@ -1,5 +1,5 @@
 function getData(){
-fetch('api.open-notify.org/iss-now.json', {
+fetch('http://api.open-notify.org/iss-now.json', {
   credentials: "include"})
 .then(function (response) {
   return response.json();
