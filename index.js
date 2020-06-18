@@ -1,6 +1,5 @@
 function getData(){
-fetch('https://www.google.ie/gwt/x?u=http://api.open-notify.org/iss-now.json', {
-  mode: "no-cors"})
+fetch('http://api.open-notify.org/iss-now.json')
 .then(function (response) {
   return response.json();
 })
