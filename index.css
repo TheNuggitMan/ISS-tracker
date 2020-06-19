@@ -1,11 +1,19 @@
 @font-face {
-  font-family: 'Earth Orbiter Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Earth Orbiter Regular'), url('font/earthorbiter.woff') format('woff');
+font-family: 'Space Ranger Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Space Ranger Regular'), url('font/spaceranger.woff') format('woff');
 }
+
+@font-face {
+font-family: 'Space Ranger Title Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Space Ranger Title Regular'), url('font/spacerangertitle.woff') format('woff');
+}
+
 body {
-  font-family:'Earth Orbiter Regular';
+  font-family:'Space Ranger Regular';
   font-weight:normal;
   font-size:25px;
 }
@@ -20,16 +28,23 @@ div, p {
   text-align: center;
 }
 
+.headers {
+  font-family:'Space Ranger Title Regular';
+  font-weight:normal;
+  font-size:25px;
+}
+
 #container {
   height: 150px;
 }
 
-#refresh, #listPeople {
+#refresh, #miles {
   margin: 0.5rem;
   padding: 1rem;
   background-color: black;
   color: white;
   border-radius: 5px;
+  font-size: 1.5rem;
   }
 
 #mapid {
