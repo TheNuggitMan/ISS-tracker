@@ -20,13 +20,12 @@ container.append(location, timeStamp);
 
 
 function getPeeps(){
-fetch('http://api.open-notify.org/astros.json')
-.then(function (peepResponse) {
-  return peepResponse.json();
-})
-.then(function (peeps) {
-  appendPeople(peeps);
-})
+const http = new XMLHttpRequest()
+
+http.open("GET", "http://api.open-notify.org/astros.json")
+http.send()
+
+http.onload = () => console.log(http.responseText)
 }
 
 function appendPeople(peeps) {
