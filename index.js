@@ -1,5 +1,7 @@
+// ?units=miles
 function getData(){
-fetch('http://api.open-notify.org/iss-now.json?callback=')
+fetch('https://api.wheretheiss.at/v1/satellites/25544')
+
 .then(function (response) {
   return response.json();
 })
@@ -8,38 +10,41 @@ fetch('http://api.open-notify.org/iss-now.json?callback=')
 })
 }
 
+function getMiles(){
+  fetch('https://api.wheretheiss.at/v1/satellites/25544?units=miles')
+  .then(function (peepResponse) {
+    return peepResponse.json();
+  })
+  .then(function (peeps) {
+    appendData(peeps);
+  })
+}
+
 function appendData(data) {
 const container = document.getElementById("container");
 const location = document.getElementById("location");
-const timeStamp= document.getElementById("timeStamp");
-location.innerHTML = "Latitude: " + data.iss_position.latitude + ', ' + "Longitude: " + data.iss_position.longitude;
-timeStamp.innerHTML = '(Time Stamp: ' + data.timestamp + ', ' + 'Location Load Status: ' + data.message + ')';
+const heightSpeed= document.getElementById("heightSpeed");
+location.innerHTML = "Latitude: " + data.latitude + ', ' + "Longitude: " + data.longitude;
+heightSpeed.innerHTML = 'Altitude: ' + data.altitude + '. ' + 'Current Speed: ' + data.velocity + '.';
 container.append(location, timeStamp);
 }
 
+//
+//
+//
+// function appendPeople(peeps) {
+//     const peopleContainer = document.getElementById("people");
+//     const howMany = document.getElementById("peopleNumber");
+//     const who = document.getElementById("peopleList");
+//     const astroPilots = peeps.people;
+//     howMany.innerHTML = "Number of People: " + peeps.number;
+//     who.innerHTML =  "Who: " +
+//     astroPilots.map(function(list){return ' ' + list.name});
+//     peopleContainer.append(howMany, who);
+//}
 
-
-function getPeeps(){
-const http = new XMLHttpRequest()
-
-http.open("GET", "http://api.open-notify.org/astros.json")
-http.send()
-
-http.onload = () => console.log(http.responseText)
-}
-
-function appendPeople(peeps) {
-const peopleContainer = document.getElementById("people");
-const howMany = document.getElementById("peopleNumber");
-const who = document.getElementById("peopleList");
-const astroPilots = peeps.people;
-howMany.innerHTML = "Number of People: " + peeps.number;
-who.innerHTML =  + "Who: " +
-astroPilots.map(function(list){return ' ' + list.name});
-peopleContainer.append(who);
-}
 document.getElementById('refresh').addEventListener("click", getData);
-document.getElementById('listPeople').addEventListener("click", getPeeps);
+document.getElementById('miles').addEventListener("click", getMiles);
 
 //The object I was working on....
 // {"message": "success", "number": 5,
