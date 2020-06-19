@@ -1,5 +1,5 @@
 function getData(){
-fetch('http://api.open-notify.org/iss-now.json?callback=info')
+fetch('http://api.open-notify.org/iss-now.json?callback=')
 .then(function (response) {
   return response.json();
 })
