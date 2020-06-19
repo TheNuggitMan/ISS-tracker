@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+        shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <link rel="icon" href="Img/earthIcon.ico">
     <link rel="stylesheet" href="index.css">
       <meta charset="utf-8">
@@ -10,16 +12,19 @@
     <div class="headers">
   <h1>Welcome</h1>
   <h2>The International Space Station is moving at close to 28,000 km/h so its location changes really fast!</h2>
-  <p>Click 'Refresh' to see exactly where is it right now.</p>
+  <p>Click 'Kilometers' to see exactly where it is right now.</p>
 </div>
   <div id="container">
     <p id="location"></p>
-    <p id="timeStamp"></p>
+    <p id="heightSpeed"></p>
+    <script> </script>
     </div>
       <div class="buttonContainer">
-        <button id="refresh">Refresh</button>
-        <p>Clicking the 'Get List' button will show a live list of how many people are on the ISS and who they are.</p>
-        <button id="listPeople">Get List</button>
+        <button id="refresh">Kilometers</button>
+        <p>To see this in Miles high & miles per hour, click the 'mph' button.
+        <button id="miles">Miles</button>
+        <!-- <p>Clicking the 'Get List' button will show a live list of how many people are on the ISS and who they are.</p>
+        <button id="listPeople">Get List</button> -->
       </div>
       <!-- <div id="mapid">      </div> -->
     <div id="people">
