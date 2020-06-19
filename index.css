@@ -31,11 +31,12 @@ div, p {
 .headers {
   font-family:'Space Ranger Title Regular';
   font-weight:normal;
-  font-size:25px;
+  font-size:20px;
 }
 
 #container {
-  height: 150px;
+  /* height: 150px; */
+  z-index: -1;
 }
 
 #refresh, #miles {
